@@ -75,7 +75,7 @@ auto windowWidth = 1000;								// Window width
 auto windowHeight = 800;								// Window height
 auto running(true);										// Are we still running our main loop
 mat4 projMatrix;										// Our Projection Matrix
-vec3 cameraPosition = vec3(0.0f, 0.0f, 5.0f);			// Where is our camera
+vec3 cameraPosition = vec3(1.0f, 1.0f, 5.0f);			// Where is our camera
 vec3 cameraFront = vec3(0.0f, 0.0f, -1.0f);				// Camera front vector
 vec3 cameraUp = vec3(0.0f, 1.0f, 0.0f);					// Camera up vector
 auto aspect = (float)windowWidth / (float)windowHeight; // Window aspect ration
@@ -239,7 +239,7 @@ void startup()
 
 	cout << endl
 		 << "Loading content..." << endl;
-	content.LoadGLTF("assets/untitled.gltf");
+	content.LoadGLTF("assets/OPENGL.gltf");
 
 	pipeline.CreatePipeline();
 	pipeline.LoadShaders("shaders/vs_model.glsl", "shaders/fs_model.glsl");
@@ -327,7 +327,7 @@ void render()
 	glm::mat4 modelMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f));
 	modelMatrix = glm::rotate(modelMatrix, modelRotation.x, glm::vec3(1.0f, 0.0f, 0.0f));
 	modelMatrix = glm::rotate(modelMatrix, modelRotation.y, glm::vec3(0.0f, 1.0f, 0.0f));
-	modelMatrix = glm::scale(modelMatrix, glm::vec3(1.0f, 1.0f, 0.2f));
+	modelMatrix = glm::scale(modelMatrix, glm::vec3(2.0f, 2.0f, 0.05f));
 
 	glm::mat4 mv_matrix = viewMatrix * modelMatrix;
 
