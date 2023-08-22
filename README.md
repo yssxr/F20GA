@@ -1,2 +1,1 @@
-# F20GA
-Coursework for Yasser Sayed 
+Low Poly recreation of the 'Lo-Fi girl'
